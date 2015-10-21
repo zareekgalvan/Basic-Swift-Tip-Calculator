@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -9,140 +10,135 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BasicTipCalcSWIFT" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="FI2-IV-W7W"/>
+                        <viewControllerLayoutGuide type="bottom" id="KZK-Bi-2aX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1YV-KY-GvD">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <rect key="frame" x="20" y="12" width="280" height="44"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="XWh-UR-w0K"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="12" width="280" height="44"/>
-                                </variation>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Meal Cost" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u5A-Xd-42M">
-                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Meal Cost" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u5A-Xd-42M">
+                                <rect key="frame" x="20" y="70" width="280" height="44"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" keyboardAppearance="alert" returnKeyType="go"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="70" width="280" height="44"/>
-                                </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Tip Percentage" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9BP-BK-bp1">
-                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <rect key="frame" x="20" y="122" width="280" height="44"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="XYo-nr-03M"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" keyboardAppearance="alert" returnKeyType="go"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="122" width="280" height="44"/>
-                                </variation>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="go"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAv-0E-aMM">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tip Total" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAv-0E-aMM">
+                                <rect key="frame" x="20" y="194" width="280" height="44"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="174" width="280" height="44"/>
-                                </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D6p-9T-lng">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D6p-9T-lng">
+                                <rect key="frame" x="20" y="276" width="280" height="40"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="LtV-20-LDm"/>
+                                </constraints>
                                 <state key="normal" title="Calculate">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="226" width="280" height="40"/>
-                                </variation>
                                 <connections>
                                     <action selector="btnCalclate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CMT-xp-A87"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Egg-TJ-8bN">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Egg-TJ-8bN">
+                                <rect key="frame" x="20" y="325" width="280" height="40"/>
                                 <animations/>
-                                <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Uti-fE-AGV"/>
+                                </constraints>
                                 <state key="normal" title="Clear">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="275" width="280" height="40"/>
-                                </variation>
                                 <connections>
                                     <action selector="btnClear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G9F-Vg-n7q"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Meal Cost" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z5y-he-imc">
-                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Meal Cost" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z5y-he-imc">
+                                <rect key="frame" x="20" y="70" width="280" height="44"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" keyboardAppearance="alert" returnKeyType="go"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="70" width="280" height="44"/>
-                                </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Meal Cost" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VkP-VP-UCv">
-                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Meal Cost" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VkP-VP-UCv">
+                                <rect key="frame" x="20" y="70" width="280" height="44"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" keyboardAppearance="alert" returnKeyType="go"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="70" width="280" height="44"/>
-                                </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Meal Cost" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EDQ-xd-WoR">
-                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <rect key="frame" x="20" y="70" width="280" height="44"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="78d-T6-M1z"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" keyboardAppearance="alert" returnKeyType="go"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="70" width="280" height="44"/>
-                                </variation>
                             </textField>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="1YV-KY-GvD"/>
-                                <exclude reference="u5A-Xd-42M"/>
-                                <exclude reference="9BP-BK-bp1"/>
-                                <exclude reference="pAv-0E-aMM"/>
-                                <exclude reference="D6p-9T-lng"/>
-                                <exclude reference="Egg-TJ-8bN"/>
-                                <exclude reference="z5y-he-imc"/>
-                                <exclude reference="VkP-VP-UCv"/>
-                                <exclude reference="EDQ-xd-WoR"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="1YV-KY-GvD"/>
-                                <include reference="u5A-Xd-42M"/>
-                                <include reference="9BP-BK-bp1"/>
-                                <include reference="pAv-0E-aMM"/>
-                                <include reference="D6p-9T-lng"/>
-                                <include reference="Egg-TJ-8bN"/>
-                                <include reference="z5y-he-imc"/>
-                                <include reference="VkP-VP-UCv"/>
-                                <include reference="EDQ-xd-WoR"/>
-                            </mask>
-                        </variation>
+                        <color key="backgroundColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="9BP-BK-bp1" firstAttribute="top" secondItem="z5y-he-imc" secondAttribute="bottom" constant="8" symbolic="YES" id="0Q3-Gq-XjS"/>
+                            <constraint firstItem="pAv-0E-aMM" firstAttribute="leading" secondItem="9BP-BK-bp1" secondAttribute="leading" id="1Zu-RK-QIg"/>
+                            <constraint firstItem="z5y-he-imc" firstAttribute="baseline" secondItem="VkP-VP-UCv" secondAttribute="baseline" id="1pH-ES-q27"/>
+                            <constraint firstItem="1YV-KY-GvD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="12" id="3BX-6e-kbl"/>
+                            <constraint firstItem="VkP-VP-UCv" firstAttribute="top" secondItem="u5A-Xd-42M" secondAttribute="top" id="5pH-am-CMM"/>
+                            <constraint firstItem="9BP-BK-bp1" firstAttribute="top" secondItem="VkP-VP-UCv" secondAttribute="bottom" constant="8" symbolic="YES" id="Bhr-6e-HgJ"/>
+                            <constraint firstItem="9BP-BK-bp1" firstAttribute="trailing" secondItem="u5A-Xd-42M" secondAttribute="trailing" id="D9k-gt-5eg"/>
+                            <constraint firstItem="1YV-KY-GvD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="Dyb-iU-MOO"/>
+                            <constraint firstItem="pAv-0E-aMM" firstAttribute="top" secondItem="9BP-BK-bp1" secondAttribute="bottom" constant="8" symbolic="YES" id="EBg-Sf-llj"/>
+                            <constraint firstItem="EDQ-xd-WoR" firstAttribute="trailing" secondItem="VkP-VP-UCv" secondAttribute="trailing" id="Fhw-iX-hPN"/>
+                            <constraint firstItem="EDQ-xd-WoR" firstAttribute="leading" secondItem="z5y-he-imc" secondAttribute="leading" id="FyF-ps-Dy0"/>
+                            <constraint firstItem="z5y-he-imc" firstAttribute="leading" secondItem="u5A-Xd-42M" secondAttribute="leading" id="H9u-dz-O1L"/>
+                            <constraint firstItem="z5y-he-imc" firstAttribute="leading" secondItem="1YV-KY-GvD" secondAttribute="leading" id="HhN-0e-oUZ"/>
+                            <constraint firstItem="pAv-0E-aMM" firstAttribute="trailing" secondItem="9BP-BK-bp1" secondAttribute="trailing" id="Ksf-dz-HEu"/>
+                            <constraint firstItem="pAv-0E-aMM" firstAttribute="trailing" secondItem="D6p-9T-lng" secondAttribute="trailing" id="PMr-fk-Dx3"/>
+                            <constraint firstItem="9BP-BK-bp1" firstAttribute="top" secondItem="u5A-Xd-42M" secondAttribute="bottom" constant="8" symbolic="YES" id="R6l-fU-24g"/>
+                            <constraint firstItem="EDQ-xd-WoR" firstAttribute="top" secondItem="1YV-KY-GvD" secondAttribute="bottom" constant="14" id="Svt-gB-2P0"/>
+                            <constraint firstItem="KZK-Bi-2aX" firstAttribute="top" secondItem="Egg-TJ-8bN" secondAttribute="bottom" constant="253" id="TTL-Ck-oQX"/>
+                            <constraint firstItem="EDQ-xd-WoR" firstAttribute="baseline" secondItem="z5y-he-imc" secondAttribute="baseline" id="Y7R-xF-qlT"/>
+                            <constraint firstItem="D6p-9T-lng" firstAttribute="top" secondItem="pAv-0E-aMM" secondAttribute="bottom" constant="8" symbolic="YES" id="bw6-s5-H4f"/>
+                            <constraint firstItem="9BP-BK-bp1" firstAttribute="leading" secondItem="VkP-VP-UCv" secondAttribute="leading" id="dY5-oX-Sl8"/>
+                            <constraint firstItem="D6p-9T-lng" firstAttribute="trailing" secondItem="Egg-TJ-8bN" secondAttribute="trailing" id="fsm-j1-xHr"/>
+                            <constraint firstItem="Egg-TJ-8bN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gu2-6R-Q30"/>
+                            <constraint firstItem="u5A-Xd-42M" firstAttribute="trailing" secondItem="z5y-he-imc" secondAttribute="trailing" id="k7P-gF-HTB"/>
+                            <constraint firstItem="D6p-9T-lng" firstAttribute="leading" secondItem="Egg-TJ-8bN" secondAttribute="leading" id="p5R-wu-3iV"/>
+                            <constraint firstItem="9BP-BK-bp1" firstAttribute="top" secondItem="EDQ-xd-WoR" secondAttribute="bottom" constant="8" symbolic="YES" id="paL-Vz-DbT"/>
+                            <constraint firstItem="EDQ-xd-WoR" firstAttribute="leading" secondItem="VkP-VP-UCv" secondAttribute="leading" id="rFe-dv-QHT"/>
+                            <constraint firstItem="D6p-9T-lng" firstAttribute="leading" secondItem="pAv-0E-aMM" secondAttribute="leading" id="sDI-Cb-Be9"/>
+                            <constraint firstItem="VkP-VP-UCv" firstAttribute="trailing" secondItem="u5A-Xd-42M" secondAttribute="trailing" id="vXR-gl-A19"/>
+                            <constraint firstItem="z5y-he-imc" firstAttribute="trailing" secondItem="1YV-KY-GvD" secondAttribute="trailing" id="xWx-7l-87z"/>
+                            <constraint firstItem="Egg-TJ-8bN" firstAttribute="top" secondItem="D6p-9T-lng" secondAttribute="bottom" constant="9" id="yjd-Dh-Icb"/>
+                        </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>

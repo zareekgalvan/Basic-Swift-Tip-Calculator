@@ -34,7 +34,10 @@ class ViewController: UIViewController {
     }
 
     @IBAction func btnClear(sender: UIButton) {
+        txtMealCost.text = ""
+        txtTip.text = ""
         
+        lblTipCalculated.text = "Tip Total"
     }
     
     func calculateTip() -> Bool {
@@ -45,7 +48,9 @@ class ViewController: UIViewController {
         
         answer = fMealCost * (fTipPercentage * 0.01)
         
-        lblTipCalculated.text = String(answer)
+        var answerFormat : NSString = NSString(format: "%0.2f", answer)
+        
+        lblTipCalculated.text = "$\(answerFormat)"
         
         return true
     }
